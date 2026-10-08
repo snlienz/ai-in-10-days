@@ -1,0 +1,14 @@
+# torch 從 PyTorch 官方 CPU 版下載：檔案較小、不含 GPU 套件，而且比 PyPI 快
+--extra-index-url https://download.pytorch.org/whl/cpu
+
+# Day 1
+anthropic==1.11.0
+pydantic==2.13.5
+python-dotenv==1.2.4
+
+# Day 2
+requests==2.34.2
+beautifulsoup4==4.15.0
+torch==2.14.1+cpu
+sentence-transformers==6.1.0
+chromadb==1.5.9

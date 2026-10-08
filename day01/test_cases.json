@@ -1,0 +1,65 @@
+{
+  "reference_date": "2026-10-07",
+  "cases": [
+    {
+      "id": 1,
+      "text": "我月薪 4 萬，到職 3 年半，上週六休息日被叫回來加班 6 小時",
+      "focus": "基本案例",
+      "expected": {"monthly_salary": 40000, "seniority_years": 3.5, "overtime_day_type": "rest_day", "overtime_hours": 6}
+    },
+    {
+      "id": 2,
+      "text": "月薪三萬二，在這間公司做兩年了，昨天下班後又被留下來 3 個鐘頭",
+      "focus": "中文數字、平日下班後",
+      "expected": {"monthly_salary": 32000, "seniority_years": 2, "overtime_day_type": "weekday", "overtime_hours": 3}
+    },
+    {
+      "id": 3,
+      "text": "禮拜六去公司加班 8 小時，月薪 45000，去年 4 月初到職",
+      "focus": "「禮拜六」模糊說法、到職日換算年資",
+      "expected": {"monthly_salary": 45000, "seniority_years": 1.5, "overtime_day_type": "rest_day", "overtime_hours": 8}
+    },
+    {
+      "id": 4,
+      "text": "這週六國慶日被叫去上班 5 小時，月薪 5 萬，年資 10 年",
+      "focus": "週六撞國定假日，國定假日優先",
+      "expected": {"monthly_salary": 50000, "seniority_years": 10, "overtime_day_type": "national_holiday", "overtime_hours": 5}
+    },
+    {
+      "id": 5,
+      "text": "中秋連假第二天還要進公司，做了 4 小時，月薪 38000，到職半年",
+      "focus": "「連假」不可自行推算日子類型",
+      "expected": {"monthly_salary": 38000, "seniority_years": 0.5, "overtime_day_type": null, "overtime_hours": 4}
+    },
+    {
+      "id": 6,
+      "text": "禮拜天被老闆叫回來弄了 2 小時，月薪大概 36000，做了 5 年",
+      "focus": "「禮拜天」→ 例假",
+      "expected": {"monthly_salary": 36000, "seniority_years": 5, "overtime_day_type": "regular_leave", "overtime_hours": 2}
+    },
+    {
+      "id": 7,
+      "text": "勞動節那天照常上班 8 小時，月薪 4 萬 2，2018 年 7 月到職",
+      "focus": "勞動節是勞工的國定假日、「4 萬 2」",
+      "expected": {"monthly_salary": 42000, "seniority_years": 8.25, "overtime_day_type": "national_holiday", "overtime_hours": 8}
+    },
+    {
+      "id": 8,
+      "text": "這週一到週五每天都多做 2 小時，月薪 35K，年資 1 年",
+      "focus": "多天加班要加總、「35K」",
+      "expected": {"monthly_salary": 35000, "seniority_years": 1, "overtime_day_type": "weekday", "overtime_hours": 10}
+    },
+    {
+      "id": 9,
+      "text": "補班的那個週六，下班後又多留了 2 小時",
+      "focus": "「補班日」是平日、沒提月薪年資要給 null",
+      "expected": {"monthly_salary": null, "seniority_years": null, "overtime_day_type": "weekday", "overtime_hours": 2}
+    },
+    {
+      "id": 10,
+      "text": "上週三颱風假公司還是要我們去上班 6 小時，月薪 4 萬，到職 3 年",
+      "focus": "颱風假不是法定假日",
+      "expected": {"monthly_salary": 40000, "seniority_years": 3, "overtime_day_type": "weekday", "overtime_hours": 6}
+    }
+  ]
+}

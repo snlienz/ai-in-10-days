@@ -218,3 +218,6 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Day 2 向量資料庫（可用 build_index 重建）
+day02/chroma_db/
